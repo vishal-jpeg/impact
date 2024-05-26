@@ -5,16 +5,16 @@
   }
   #header
   #about{
-    width: 100%;
+    width: 110%;
   }
   #services,
   #testimonials,
   #team,
   #contact{
-    width: 100%;
+    width: 110%;
   }
 
   #portfolio {
-    width: 100%;
+    width: 111%;
   }
 }

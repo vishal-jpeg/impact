@@ -465,11 +465,7 @@ header .intro-text {
   margin: 1px -15px 0 -14px;
   padding: 0;
 } 
-@media (max-width:767px) {
-  .portfolio-item{
-    margin: 0px;
-  }
-}
+
 
 .portfolio-item .hover-bg {
   overflow: hidden;

@@ -20,7 +20,7 @@ export const Navigation = (props) => {
           <div className="disp-flex">
           <img src={Logo} className="me-1 navbar-logo " ></img>
           <a className="navbar-brand page-scroll" href="#page-top">
-            SK HR ENTERPRISE
+            Impact Auto Components
           </a>
           </div>{" "}
         </div>
