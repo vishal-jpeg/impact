@@ -16,28 +16,54 @@ const Pom = (props) => {
 
   // State to manage client retention percentage
   const [clientRetentionPercentage, setClientRetentionPercentage] = useState(initialClientRetentionPercentage);
+  const [isInView, setIsInView] = useState(false);
 
-  const circleRadius = 45;
+  const circleRadius = 22;
   const circumference = 2 * Math.PI * circleRadius;
   const offset = circumference - (clientRetentionPercentage / 100) * circumference;
 
-  // Simulate increasing client retention percentage with time
   useEffect(() => {
-    const interval = setInterval(() => {
-      // Increase client retention percentage gradually until it reaches the target
-      if (clientRetentionPercentage < targetClientRetentionPercentage) {
-        setClientRetentionPercentage(prevPercentage => prevPercentage + 1);
-      } else {
-        clearInterval(interval);
+    if (isInView) {
+      const interval = setInterval(() => {
+        if (clientRetentionPercentage < targetClientRetentionPercentage) {
+          setClientRetentionPercentage((prevPercentage) => prevPercentage + 1);
+        } else {
+          clearInterval(interval);
+        }
+      }, 30); // Adjust the interval for smoother animation
+
+      return () => clearInterval(interval);
+    }
+  }, [isInView, clientRetentionPercentage, targetClientRetentionPercentage]);
+
+  const handleScroll = (entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      setIsInView(true);
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleScroll, {
+      threshold: 0.3, // Adjust the threshold as needed
+    });
+
+    const section = document.getElementById('pom');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
       }
-    }, 30); // Adjust the interval for smoother animation
-    return () => clearInterval(interval);
-  }, [clientRetentionPercentage, targetClientRetentionPercentage]);
+    };
+  }, []);
 
   return (
     <div id="pom">
       <div className="container">
-        <div className="col-md-10 col-md-offset-1 section-title" data-aos="fade-in">
+        <div className="col-md-10 col-md-offset-1 section-title ms-0 mb-0" data-aos="fade-in">
           <h2>Principles of Management</h2>
         </div>
         <div className="row">
@@ -47,41 +73,68 @@ const Pom = (props) => {
             data-aos-duration="1500"
             data-aos-easing="ease-in-out"
           >
-            {/* Display content for Impact Auto Components */}
-            {/* <div className="impact-auto-components">
-              <h3>Impact Auto Components</h3>
-              <p>Content for Impact Auto Components goes here...</p>
-            </div> */}
-            {/* Display core values, vision, and mission */}
             <div className="info">
               <div className="info-item">
-                <i className="fa fa-lightbulb"></i>
+                <i class="fa fa-lightbulb-o pom-icon-1" aria-hidden="true"></i>
+                <div>
                 <h3>Core Values</h3>
-                <p>Domain Leadership, Accountability, Team Work, Ambition, Passion, Integrity, Extra Mile.</p>
+                {/* <p>Precision, Innovation, Integrity, Quality, Customer focus.</p> */}
+                <p>
+               <ul><b>Precision</b>: Commitment to exactness and accuracy in every product.</ul>
+                <ul><b>Innovation</b>: Continuously improving and embracing new technologies.</ul>
+                <ul> <b>Integrity</b>: Upholding honesty and strong moral principles in all operations.</ul>
+                <ul><b>Quality</b>: Ensuring the highest standards in our manufacturing processes.</ul>
+                <ul><b>Customer Focus</b>: Prioritizing customer satisfaction and needs.</ul>
+                </p>
+                </div>
               </div>
-              <div className="info-item">
-                <i className="fa fa-eye"></i>
+              <div className="info-item ">
+                <i className="fa fa-eye pom-icon-2"></i>
+                <div>
                 <h3>Vision</h3>
-                <p>Our Vision is to be a GLOBAL BRAND for HRMS & FIXED ASSET MANAGEMENT.</p>
+                <p>To deliver superior quality and precision in manufacturing, leveraging cutting-edge CNC technology to meet and exceed customer expectations.</p>
+                </div>
               </div>
-              <div className="info-item">
-                <i className="fa fa-bullseye"></i>
-                <h3>Mission</h3>
-                <p>Our Mission is to provide industry-leading technologies for HRMS & FIXED ASSET MANAGEMENT with customer-centricity, brand, and organization building.</p>
+              <div className="info-item ">
+                <i className="fa fa-bullseye pom-icon-3"></i>
+              <div>
+              <h3>Mission</h3>
+                <p>To be a global leader in the manufacturing industry, recognized for our innovation, quality, and commitment to excellence.</p>
+              </div>
               </div>
             </div>
           </div>
-          <div
-            className="col-xs-12 col-md-6"
-            data-aos="fade-left"
-          >
+          <div className="col-xs-12 col-md-6">
             <div className="image-container">
-              <div className="progress-ring">
-                <svg className="progress-ring-circle" width="100" height="100">
-                  <circle className="progress-ring-circle-bg" stroke="#e6e6e6" strokeWidth="4" fill="transparent" r={circleRadius} cx="50" cy="50" />
-                  <circle className="progress-ring-circle-fg" stroke="blue" strokeWidth="4" fill="transparent" r={circleRadius} cx="50" cy="50" style={{ strokeDasharray: `${circumference} ${circumference}`, strokeDashoffset: offset }} />
-                </svg>
-                <div className="progress-value">{clientRetentionPercentage}%</div>
+              <img src="img/pom-image-1.png" className="img-responsive zoom-in-effect pom-image-placement " alt="" />
+              <div className="progress-ring-container">
+                <div className="progress-ring">
+                  <svg className="progress-ring-circle" width="100" height="100">
+                    <circle
+                      className="progress-ring-circle-bg"
+                      stroke="#e6e6e6"
+                      strokeWidth="4"
+                      fill="transparent"
+                      r={circleRadius}
+                      cx="50"
+                      cy="50"
+                    />
+                    <circle
+                      className="progress-ring-circle-fg"
+                      stroke="blue"
+                      strokeWidth="4"
+                      fill="transparent"
+                      r={circleRadius}
+                      cx="50"
+                      cy="50"
+                      style={{ strokeDasharray: `${circumference} ${circumference}`, strokeDashoffset: offset }}
+                    />
+                  </svg>
+                </div>
+                <div className="progress-text">
+                  <span className="progress-value">{clientRetentionPercentage}%</span>
+                  <h3>Client Retention</h3>
+                </div>
               </div>
             </div>
           </div>

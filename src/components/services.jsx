@@ -21,10 +21,10 @@ export const Services = (props) => {
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-              <div key={`${d.name}-${i}`} className="col-md-6" data-aos="fade-up">
+              <div key={`${d.name}-${i}`} className="col-md-6 " data-aos="fade-up">
                   {" "}
-                  <i className={d.icon}></i>
-                  <div className="service-desc">
+                  <i className={d.icon} ></i>
+                  <div className="service-desc zoom-in-effect">
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
                   </div>

@@ -20,7 +20,7 @@ export const About = (props) => {
             data-aos-easing="ease-in-out"
           >
             {" "}
-            <img src="img/1.png" className="img-responsive" alt="" />{" "}
+            <img src="img/about-1.png" className="img-responsive zoom-in-effect" alt="" />{" "}
           </div>
           <div
             className="col-xs-12 col-md-6"

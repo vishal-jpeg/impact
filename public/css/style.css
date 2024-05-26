@@ -72,69 +72,35 @@ hr {
 }
 /* Contact Bar */
 
-.contact-bar-links{
-  font-size: 18px;
-  display: inline-flex; /* Display as inline flex container */
-  align-items: center; /* Align items vertically */
-  color: white;
-}
-.contact-bar-icons{
-  font-size:22px;
-  margin: 5px;
-  color: white;
-}
-
-.contact-bar {
+/* .contact-bar {
   position: fixed;
   top: 0;
-  left :0;
-  width:100%;
-  height: 50px;
-  background-color: #000;
+  width: 100%;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
   transition: top 0.3s;
   z-index: 1000;
-  box-sizing: border-box; /* Ensure padding is included in the width */
+} */
+
+/* .contact-bar.hidden {
+  top: -50px;
 }
 
-.contact-bar.hidden {
-  top: -50px; /* Adjust this value to hide the bar completely */
-}
 .navbar.with-contact-bar {
-  top: 50px; /* Adjust this value based on the height of the contact bar */
-}
-.disp-flex{
-  display: flex;
+  top: 50px; 
 }
 
 .navbar.without-contact-bar {
   top: 0;
 }
 
-
-/* ====================== MEDIA QURIES (MEDIUM DEVICES) ========================*/
-@media screen and (max-width:1024px) {
-    .contact-bar-icons{
-      font-size: 12px;
-    }
-    .contact-bar-links{
-      font-size: 12px;
-    }
-}
-
-/* ====================== MEDIA QURIES (MEDIUM DEVICES) ========================*/
-@media screen and (max-width:600px) {
-  .contact-bar-icons{
-    font-size: 8px;
-  }
-  .contact-bar-links{
-    font-size: 8px;
-  }
-
-}
-
+.navbar-fixed-top {
+  position: fixed;
+  width: 100%;
+  z-index: 900; 
+} */
 
 
 /* Navigation */
@@ -148,14 +114,33 @@ hr {
   border-color: rgba(231, 231, 231, 0);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
+.me-1{
+  margin-right: 10px;
+}
+.navbar-logo{
+  width: 45px;
+  height: 45px;
+}
 #menu a.navbar-brand {
   font-family: "Raleway", sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   color: #1A377E;
   text-transform: uppercase;
 }
+/* ====================== MEDIA QURIES (MEDIUM DEVICES) ========================*/
+@media screen and (max-width:1024px) {
+  #menu a.navbar-brand{
+      font-size: 15px;
+  }
+}
 
+/* ====================== MEDIA QURIES (MEDIUM DEVICES) ========================*/
+@media screen and (max-width:600px) {
+  #menu a.navbar-brand{
+      font-size: 12px;
+  }
+}
 #menu.navbar-default .navbar-nav > li > a {
   font-family: "Lato", sans-serif;
   text-transform: uppercase;
@@ -273,27 +258,25 @@ a:focus,
   outline-offset: none;
 }
 /* Header Section */
-.container-intro {
-    margin-top: 8%;
-} 
+
 @media (max-width: 1200px) {
   .container-intro{
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 @media (max-width: 770px) {
   .container-intro{
-    margin-top: 20%;
+    margin-top: 10%;
   }
 }
-@media (max-width:400px) {
+/* @media (max-width:600px) {
   #header{
     width: 110%;
   }
-}
-@media (max-width:334px) {
+} */
+@media  (max-width:334px) {
   .container-intro{
-    margin-top: 35%;
+    margin-top: 25%;
   }
 }
 
@@ -372,6 +355,11 @@ header .intro-text {
 /* About Section */
 #about {
   padding: 100px 0;
+}
+@media screen and (max-width:767px) {
+  #about {
+    padding: 20px 0;
+  }
 }
 #about h3 {
   font-size: 22px;
@@ -476,7 +464,13 @@ header .intro-text {
 .portfolio-item {
   margin: 1px -15px 0 -14px;
   padding: 0;
+} 
+@media (max-width:767px) {
+  .portfolio-item{
+    margin: 0px;
+  }
 }
+
 .portfolio-item .hover-bg {
   overflow: hidden;
   position: relative;
@@ -543,27 +537,35 @@ header .intro-text {
   height: 64px;
   border-radius: 50%;
 }
-.testimonial-content {
-  position: relative;
+.testimonials-container {
   overflow: hidden;
 }
-.testimonial-content p {
-  margin-bottom: 0;
-  font-size: 14px;
-  font-style: italic;
+.testimonials-row{
+  height: 150px;
 }
-.testimonial-meta {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #666;
+.testimonial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.testimonial-image{
+  max-width: 100%;
+  max-height: 100%;
+  
 }
 /* Team Section */
 #team {
   padding: 100px 0;
+  /* background-color:#f6f6f6 ; */
 }
 #team h4 {
   margin: 5px 0;
+  color: #1A377E;
+}
+.job {
+  color: #1A377E;
 }
 #team .team-img {
   width: 240px;
@@ -576,6 +578,80 @@ header .intro-text {
   padding: 10px 0 0;
   color: #888;
 }
+/* new team css */
+.team {
+  margin-bottom: 30px;
+}
+
+.team .thumbnail {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team .thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.team .team-img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.team .caption {
+  position: relative;
+  padding: 20px;
+  background: white;
+  text-align: center;
+}
+
+.team .name-job {
+  transition: transform 0.3s ease;
+}
+
+.team .thumbnail:hover .name-job {
+  transform: translateY(-100%);
+}
+
+.team .caption .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1A377E;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.team .thumbnail:hover .caption .description {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team .caption h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.team .caption p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.team .caption .description p {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+/* end of teams css */
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
@@ -602,6 +678,9 @@ header .intro-text {
   width: 60px;
   bottom: 0;
   left: 30px;
+}
+#contact a{
+  color: #fff;
 }
 #contact h3 {
   color: #fff;
@@ -702,6 +781,15 @@ label {
   color: #608dfd;
   background: #fff;
 }
+ .success-message{
+  background-color: #000;
+  width: fit-content;
+ }
+ .button-bg{
+  background-color: #000;
+ }
+
+
 /* Footer Section*/
 #footer {
   background: #f6f6f6;
@@ -730,34 +818,175 @@ label {
 
 #pom {
   padding: 50px 0;
+  background-color: #f6f6f6;
+}
+#pom h2::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, #1A377E 0%, #1861B8 100%);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  left: 26px;
+}
+.pom-icon-1 {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  padding-left:  17px ;
+  background: linear-gradient(to right, #1A377E 0%, #1861B8 100%);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  display: inline-flex; /* Display as inline flex container */
+  align-items: center; /* Align items vertically */
+}
+.pom-icon-2{
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  padding:  10px 10px ;
+  background: linear-gradient(to right, #1A377E 0%, #1861B8 100%);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+
+}
+.pom-icon-3{
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px ;
+  background: linear-gradient(to right, #1A377E 0%, #1861B8 100%);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.pom-image-placement{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-title {
+  margin-bottom: 40px;
+}
+
+.info-item {
+  margin-bottom: 20px;
 }
 
 .image-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.progress-ring-container {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* Change to 'left: 10px;' if you want it in the top-left corner */
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
 .progress-ring {
-  position: relative;
-  width: 100px;
-  height: 100px;
+  width: 50px;  /* Adjust width */
+  height: 55px;  /* Adjust height */
+  margin-right: 10px; /* Space between progress bar and text */
+}
+
+.progress-ring-circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-width: 3;  /* Adjust stroke width */
+  position: absolute; /* Ensure the position is absolute within the container */
+  top: 90%;  /* Center vertically within the container */
+  left: 25%; /* Center horizontally within the container */
+  transform: translate(-50%, -50%); /* Adjust the centering */
+}
+
+.progress-ring-circle-bg,
+.progress-ring-circle-fg {
+  r: 22;  /* Adjust radius */
+  cx: 25;  /* Center within the new width */
+  cy: 25;  /* Center within the new height */
 }
 
 .progress-value {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 15%;
   transform: translate(-50%, -50%);
-  font-size: 20px;
+  font-size: 12px;  /* Adjust font size */
+  font-weight: bold;
+  color: #000;
+}
+
+.progress-text h3 {
+  color: #000;
+  font-weight: bold;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .progress-ring-container {
+    top: 5px;
+    right: 5px; /* Change to 'left: 5px;' if you want it in the top-left corner */
+  }
+
+  .progress-ring {
+    width: 50px;  /* Adjust for smaller screens */
+    height: 50px;  /* Adjust for smaller screens */
+  }
+
+  .progress-ring-circle-bg,
+  .progress-ring-circle-fg {
+    r: 22;  /* Adjust radius for smaller size */
+    cx: 25;  /* Center within the new width */
+    cy: 25;  /* Center within the new height */
+  }
+  .progress-ring-circle{
+    position: absolute; /* Ensure the position is absolute within the container */
+    top: 92%;  /* Center vertically within the container */
+    left: 31%; /* Center horizontally within the container */
+    transform: translate(-50%, -50%); /* Adjust the centering */
+  }
+  .progress-value {
+    font-size: 10px;  /* Adjust font size */
+  }
+
+  .progress-text h3 {
+    font-size: 12px;
+  }
+}
+
+.ms-0 {
+  margin-left: 0px;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.disp-flex {
+  display: flex;
+  width: fit-content;
 }
 
 .info {
   padding: 20px;
-}
-
-.info-item {
-  margin-bottom: 20px;
 }
 
 .info-item i {
@@ -769,4 +998,16 @@ label {
     width: 100%;
   }
 }
+.zoom-in-effect {
+  transition: transform 0.5s ease-in-out; /* Add a smooth transition for the transform */
+}
+
+.zoom-in-effect:hover {
+  transform: scale(1.1); /* Scale up the div on hover */
+}
+.br-2{
+  border-radius: 20px;
+}
+
+/* End of Pom.css */
 

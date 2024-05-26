@@ -5,7 +5,7 @@ import Pom from "./components/pom"
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import { Gallery } from "./components/gallery";
-import { Testimonials } from "./components/testimonials";
+import { Clients } from "./components/Clients";
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
@@ -29,13 +29,13 @@ const App = () => {
       <Navigation/>
       <Header data={landingPageData.Header} />
       <About data={landingPageData.About} />
-      {/* <Pom data={landingPageData.About}/> */}
+      <Pom data={landingPageData.About}/>
       {/* <Features data={landingPageData.Features} /> */}
       <Services data={landingPageData.Services} />
-      {/* <Gallery data={landingPageData.Gallery} />
-      <Testimonials data={landingPageData.Testimonials} />
+      <Gallery data={landingPageData.Gallery} />
+      <Clients data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
-      <Contact data={landingPageData.Contact} /> */}
+      <Contact data={landingPageData.Contact} />
     </div>
   );
 };

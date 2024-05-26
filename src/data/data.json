@@ -17,49 +17,29 @@
   },
   "Gallery": [
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/01-large.jpg",
-      "smallImage": "img/portfolio/01-small.jpg"
+      "title": "Office Space",
+      "largeImage": "img/gallery/large-images/1.png",
+      "smallImage": "img/gallery/small-images/1.png"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/02-large.jpg",
-      "smallImage": "img/portfolio/02-small.jpg"
+      "title": "Office Space",
+      "largeImage": "img/gallery/large-images/2.png",
+      "smallImage": "img/gallery/small-images/2.png"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/03-large.jpg",
-      "smallImage": "img/portfolio/03-small.jpg"
+      "title": "Office Space",
+      "largeImage": "img/gallery/large-images/3.png",
+      "smallImage": "img/gallery/small-images/3.png"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/04-large.jpg",
-      "smallImage": "img/portfolio/04-small.jpg"
+      "title": "Office Space",
+      "largeImage": "img/gallery/large-images/4.png",
+      "smallImage": "img/gallery/small-images/4.png"
     },
     {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/05-large.jpg",
-      "smallImage": "img/portfolio/05-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/06-large.jpg",
-      "smallImage": "img/portfolio/06-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/07-large.jpg",
-      "smallImage": "img/portfolio/07-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/08-large.jpg",
-      "smallImage": "img/portfolio/08-small.jpg"
-    },
-    {
-      "title": "Project Title",
-      "largeImage": "img/portfolio/09-large.jpg",
-      "smallImage": "img/portfolio/09-small.jpg"
+      "title": "Office Space",
+      "largeImage": "img/gallery/large-images/5.png",
+      "smallImage": "img/gallery/small-images/5.png"
     }
   ],
   "Services": [
@@ -119,29 +99,28 @@
   "Team": [
     {
       "img": "img/team/01.jpg",
-      "name": "John Doe",
-      "job": "Director"
+      "name": "M.Palanivel",
+      "job": "Founder",
+      "description": "Palanivel started his career at TVS Wabco in 2009, then worked as an SPM Project Engineer at Dynamic Techno System from 2010 to 2018. In 2019, he founded Impact Auto Components, which has efficiently supplied all OEMs for six years under his leadership."
     },
     {
       "img": "img/team/02.jpg",
-      "name": "Mike Doe",
-      "job": "Senior Designer"
+      "name": "P.Saravanan",
+      "job": "Co-Founder",
+      "description":"P. Saravanan began his career in 2013, specializing in Special Purpose Machines. With 11 years of industry experience, he became Joint Director at Impact Auto Systems in 2022, overseeing project management and delivery."
     },
     {
       "img": "img/team/03.jpg",
-      "name": "Jane Doe",
-      "job": "Senior Designer"
-    },
-    {
-      "img": "img/team/04.jpg",
-      "name": "Karen Doe",
-      "job": "Project Manager"
+      "name": "Ravi Venkataraman",
+      "job": "CEO",
+      "description":"Ravi Venkataraman, CEO of Impact Auto Components, oversees business strategy, customer acquisition, production, and marketing. Since 1987, he has driven the company's strategic direction and growth in sustainable product design within the automobile machining and assembly industry."
+
     }
   ],
   "Contact": {
-    "address": "4321 California St, San Francisco, CA 12345 ",
-    "phone": "+1 123 456 1234",
-    "email": "info@company.com",
+    "address": "21E,Chennai Bypass Road, Tass Industrial Estate, Sidco Industrial Estate, Ambattur, Chennai - 600058",
+    "phone": "+91 8939424505",
+    "email": "impautosys@yahoo.com",
     "facebook": "fb.com",
     "twitter": "twitter.com",
     "youtube": "youtube.com"
