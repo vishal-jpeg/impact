@@ -3,18 +3,23 @@
     padding: 20px;
     width: 100%;
   }
-  #header
-  #about{
-    width: 110%;
+  #header{
+    width: 104%;
   }
+  #about{
+    width: 104%;
+  }
+  #pom,
   #services,
-  #testimonials,
   #team,
   #contact{
-    width: 110%;
+    width: 104%;
+  }
+  #testimonials{
+    width: 100%;
   }
 
   #portfolio {
-    width: 111%;
+    width: 103%;
   }
 }
