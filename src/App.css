@@ -1,25 +1,34 @@
 @media screen and (max-width: 600px) {
-  #features {
-    padding: 20px;
-    width: 100%;
+  .intro h1{
+    font-size: 50px!important;
+  }
+  .intro p{
+    font-size: 15px;
+  }
+  .btn-custom{
+    margin-bottom: 10px;
   }
   #header{
-    width: 104%;
+    width: 111%;
+  }
+  #features {
+    padding: 20px;
+    width: 111%;
   }
   #about{
-    width: 104%;
+    width: 111%;
   }
   #pom,
   #services,
   #team,
   #contact{
-    width: 104%;
+    width: 111%;
   }
   #testimonials{
-    width: 100%;
+    width: 111%;
   }
 
   #portfolio {
-    width: 103%;
+    width: 110%;
   }
 }

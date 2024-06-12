@@ -1,18 +1,42 @@
-import React from "react";
-import Clip from "../Assests/intro.mp4";
-import Poster from "../Assests/poster.png";
-
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Header = (props) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration
+      once: true, // Only once
+      mirror: false, // Disable mirroring
+    });
+  }, []);
+
   return (
     <header id="header">
       <div className="intro">
-        <div className="container-intro">
-          <div className="row m-0">
-            <video className="video-intro" autoPlay loop muted poster={Poster}>
-              <source src={Clip} type='video/mp4' />
-            </video>
+        <div className="overlay">
+          <div className="container">
+            <div className="row">
+              <div
+                className="col-md-8 col-md-offset-2 intro-text"
+                data-aos="fade-left" 
+              >
+                <h1 >
+                  {props.data ? props.data.title : "Loading"}
+                  <span></span>
+                </h1>
+                <p data-aos="zoom-in"> 
+                  {props.data ? props.data.paragraph : "Loading"}
+                </p>
+                <a
+                  href="#contact"
+                  className="btn btn-custom btn-lg page-scroll "
+                  data-aos="fade-up" 
+                >
+                  Contact Us
+                </a>{" "}
+              </div>
+            </div>
           </div>
         </div>
       </div>

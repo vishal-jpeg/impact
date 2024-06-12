@@ -1,4 +1,8 @@
 {
+  "Header": {
+    "title": "Impact Auto Components",
+    "paragraph": "We specialize in precise metal casting using CMC and VMC. Our services include assembly tasks with plastic and rubber molding, as well as flashing and deflashing processes. We ensure high-quality production efficiently."
+  },
   
   "About": {
     "paragraph1": "Our company specializes in metal casting using CMC and VMC for precise hole creation and shaping. We also perform assembly tasks involving both plastic and rubber molding. Our services include flashing and deflashing processes, and we assemble all sub-parts into complete parts. We ensure high-quality production within a short time span, utilizing a limited number of employees efficiently.",
@@ -19,32 +23,38 @@
     {
       "title": "Office Space",
       "largeImage": "img/gallery/large-images/1.png",
-      "smallImage": "img/gallery/small-images/1.png"
+      "smallImage": "img/gallery/small-images/1.png",
+      "alt":"Office Space"
     },
     {
       "title": "Office Space",
       "largeImage": "img/gallery/large-images/2.png",
-      "smallImage": "img/gallery/small-images/2.png"
+      "smallImage": "img/gallery/small-images/2.png",
+      "alt":"Office Space"
     },
     {
       "title": "Office Space",
       "largeImage": "img/gallery/large-images/3.png",
-      "smallImage": "img/gallery/small-images/3.png"
+      "smallImage": "img/gallery/small-images/3.png",
+      "alt":"Office Space"
     },
     {
       "title": "Office Space",
       "largeImage": "img/gallery/large-images/4.png",
-      "smallImage": "img/gallery/small-images/4.png"
+      "smallImage": "img/gallery/small-images/4.png",
+      "alt":"Office Space"
     },
     {
       "title": "Office Space",
       "largeImage": "img/gallery/large-images/5.png",
-      "smallImage": "img/gallery/small-images/5.png"
+      "smallImage": "img/gallery/small-images/5.png",
+      "alt":"Office Space"
     },
     {
       "title": "Office Space",
       "largeImage": "img/gallery/large-images/6.png",
-      "smallImage": "img/gallery/small-images/6.png"
+      "smallImage": "img/gallery/small-images/6.png",
+      "alt":"Office Space"
     }
   ],
   "Services": [
@@ -103,19 +113,19 @@
   ],
   "Team": [
     {
-      "img": "img/team/01.jpg",
+      "img": "img/team/user.png",
       "name": "M.Palanivel",
       "job": "Founder",
       "description": "Palanivel started his career at TVS Wabco in 2009, then worked as an SPM Project Engineer at Dynamic Techno System from 2010 to 2018. In 2019, he founded Impact Auto Components, which has efficiently supplied all OEMs for six years under his leadership."
     },
     {
-      "img": "img/team/02.jpg",
+      "img": "img/team/user.png",
       "name": "P.Saravanan",
       "job": "Co-Founder",
       "description":"P. Saravanan began his career in 2013, specializing in Special Purpose Machines. With 11 years of industry experience, he became Joint Director at Impact Auto Systems in 2022, overseeing project management and delivery."
     },
     {
-      "img": "img/team/03.jpg",
+      "img": "img/team/user.png",
       "name": "Ravi Venkataraman",
       "job": "CEO",
       "description":"Ravi Venkataraman, CEO of Impact Auto Components, oversees business strategy, customer acquisition, production, and marketing. Since 1987, he has driven the company's strategic direction and growth in sustainable product design within the automobile machining and assembly industry."
